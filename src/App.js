@@ -13,13 +13,20 @@ function App() {
     url: "",
   });
 
+  function closePopUp() {
+    setPopUpVisible(false);
+  }
+
   function popUpToggle(id) {
     setPopUpVisible(!popUpVisible);
     appData.posts.map((item) => {
       if (item.id === id) {
         let popUpData = {
-          title: item["quote-text"] || "DEMO",
-          content: item["quote-source"] || item["photo-caption"] || "",
+          title: item["quote-text"] || item["regular-title"] || "",
+          content:
+            item["quote-source"] ||
+            item["photo-caption"] ||
+            item["regular-body"],
           photo: "",
           url: item.url,
         };
@@ -38,7 +45,7 @@ function App() {
       <header>
         <h1>
           <a className="mainTitle">{appData.tumblelog.title}</a>
-          <a className="btn btn-blue rssBtn">
+          <a className="btn btn-blue rssBtn" href="https://demo.tumblr.com/rss">
             <img
               src="https://static.tumblr.com/vr9xgox/oiLnf8zpv/rss.gif"
               id="rss"
@@ -47,16 +54,18 @@ function App() {
           </a>
         </h1>
       </header>
-      {popUpVisible && (
-        <Popup
-          setPopUpVisible = {setPopUpVisible}
-          isOpen={true}
-          blogTitle={popUpData.title}
-          blogContent={popUpData.content}
-          photo={popUpData.photo}
-          url={popUpData.url}
-        />
-      )}
+      <div className="modal">
+        {popUpVisible && (
+          <Popup
+            closeEvent={closePopUp}
+            isOpen={true}
+            blogTitle={popUpData.title}
+            blogContent={popUpData.content}
+            photo={popUpData.photo}
+            url={popUpData.url}
+          />
+        )}
+      </div>
       <div className="content wrapper">
         <div className="posts">
           {appData.posts.map((post, index) => {
@@ -75,6 +84,7 @@ function App() {
 
             return (
               <Post
+                key={index}
                 url={post.url}
                 id={post.id}
                 type={post.type}

@@ -228,9 +228,9 @@ p {
 /* POPUP  */
 
 .popUp {
-  background-color: violet;
-  width: 40%;
-  height: 40%;
+  background-color: #eee;
+  width: 50%;
+  height:auto;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -239,7 +239,18 @@ p {
   border-radius: 2rem;
 }
 
-.postDate{
-  font-size: .5rem;
-  padding-left: 1rem;
+.postDate {
+  font-size: 0.5rem;
+  padding-bottom: .2em;
+  border-bottom: 1px solid #444;
+  width: 20%;
+}
+
+.openPopUp{
+  cursor: pointer;
+  font-size: .5em;
+  text-align: end;
+  display:block;
+  padding:1em 0;
+  text-decoration: underline;
 }

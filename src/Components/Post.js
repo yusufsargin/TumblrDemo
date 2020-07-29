@@ -126,13 +126,8 @@ export default function Post(props) {
   };
 
   return (
-    <div
-      className="post"
-      onClick={() => {
-        popUpHandler(id);
-      }}
-    >
-      <p className='postDate' >{getFormattedDate(new Date(date))}</p>
+    <div className="post">
+      <p className="postDate">{getFormattedDate(new Date(date))}</p>
       {isDateVisible && (
         <div className="date">
           <div className="date_brick">
@@ -154,6 +149,16 @@ export default function Post(props) {
         />
       </a>
       {postContent()}
+      {url !== "" && (
+        <a
+          className="btn openPopUp"
+          onClick={() => {
+            popUpHandler(id);
+          }}
+        >
+          Read More
+        </a>
+      )}
     </div>
   );
 }

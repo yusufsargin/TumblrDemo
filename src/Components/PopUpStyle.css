@@ -3,6 +3,11 @@
   display: grid;
   grid-template-columns: 1fr;
   text-align: center;
+  
+}
+
+.popUpWrapper h1{
+    border-bottom: 1px solid black;
 }
 
 .readMore {
