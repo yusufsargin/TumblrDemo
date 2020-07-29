@@ -1,0 +1,25 @@
+.popUpWrapper {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.readMore {
+  border: 2px solid #6498cc;
+  padding: 0.5em;
+  align-self: center;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 1em;
+  background-color: #6498cc;
+  color: white;
+  text-decoration: none;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  width: 30px;
+}

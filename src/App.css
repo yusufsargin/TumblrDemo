@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+}
+p,
+a {
+  color: #444;
+}
+
+footer {
+  text-align: center;
+  padding: 2em;
+  font-size: 1em;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.sideBar {
+  width: 30%;
+  text-align: end;
+}
+
+.posts {
+  width: 60%;
+}
+
+header h1 {
+  padding: 0px 100px 20px 100px;
+  margin: 50px auto 40px auto;
+  border-bottom: solid 1px #ccc;
+  text-align: center;
+  font: Bold 55px "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  letter-spacing: -2px;
+  line-height: 50px;
+}
+
+header .rssBtn {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  width: 50px;
+}
+
+.rssBtn img {
+  width: 80%;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.permalink {
+  width: 14px;
+  height: 13px;
+  border-width: 0px;
+  background-color: #000;
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 10;
+}
+
+.post {
+  margin-bottom: 40px;
+}
+
+.div.post,
+div.quote,
+div.quote_text {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #888;
+  padding-left: 10px;
+}
+
+div.quote_text {
+  border-left: solid 5px #6498cc;
+  font-size: 36px;
+}
+
+.source {
+  font-size: 16px;
+  font-weight: Bold;
+  color: #555;
+  margin-top: 5px;
+}
+
+.source a {
+  color: #444;
+}
+
+.caption {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 0 20px;
+  text-align: center;
+  color: #444;
+}
+
+.mainTitle {
+  color: #444;
+}
+
+.link a.link {
+  font: Bold 20px Helvetica, Arial, sans-serif;
+  letter-spacing: -1px;
+  color: #c00;
+}
+
+.description span {
+  padding: 2rem 0;
+}
+
+.description {
+  font-weight: normal;
+  letter-spacing: -1px;
+}
+
+.conversation ul {
+  font-size: 1rem;
+  list-style: none;
+  margin: 0;
+  padding-left: 1px;
+  border-left: 5px solid #bbb;
+}
+
+.conversation li {
+  padding: 4px 10px 4px 8px;
+  margin-bottom: 1px;
+  font-size: 1em;
+}
+
+.conversation li.odd .label.user {
+  color: #c00;
+  font-weight: bold;
+}
+.conversation li.even .label.user {
+  color: #00c;
+  font-weight: bold;
+}
+
+.conversation li.odd {
+  background-color: #f4f4f4;
+}
+
+.conversation li.even {
+  background-color: #e8e8e8;
+}
+
+.regular {
+  font-size: 1em;
+  color: #444;
+  line-height: 17px;
+}
+
+.regular p {
+  margin: 1rem 0;
+}
+
+.regular ul {
+  padding: 0 4rem;
+}
+
+.regular h2 {
+  color: #6498cc;
+  text-decoration: none;
+}
+
+.regular blockquote {
+  margin-left: 4rem;
+  border-left: solid 2px #444;
+  padding-left: 10px;
+  font-style: italic;
+}
+
+.post {
+  position: relative;
+}
+
+.post .date {
+  position: absolute;
+  left: -260px;
+  text-align: right;
+  width: 230px;
+  white-space: nowrap;
+  font: normal 34px Helvetica, sans-serif;
+  letter-spacing: -2px;
+  color: #ccc;
+  text-transform: uppercase;
+  line-height: 35px;
+}
+
+.post .date_brick {
+  float: right;
+  height: 30px;
+  width: 45px;
+  background-color: #6498cc;
+  color: #bbd5f1;
+  font: Bold 12px Verdana, Sans-Serif;
+  text-align: center;
+  line-height: 12px;
+  margin-left: 10px;
+  padding-top: 5px;
+  letter-spacing: 0px;
+  overflow: hidden;
+}
+
+p {
+  margin: 1em 0;
+}
+
+/* POPUP  */
+
+.popUp {
+  background-color: violet;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 2rem;
+}
+
+.postDate{
+  font-size: .5rem;
+  padding-left: 1rem;
+}
